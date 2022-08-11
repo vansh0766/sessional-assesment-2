@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Picture Galley Application</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: violet;
+            background-image: linear-gradient(to right, rgb(28, 3, 53), white, rgb(28, 3, 53));
+        }
+
+        #background {
+            height: auto;
+            background-color: violet;
+            background-image: linear-gradient(to right, rgb(28, 3, 53), white, rgb(28, 3, 53));
+            z-index: 1;
+        }
+
+        #header {
+            padding-top: 5px;
+            height: 80px;
+            background-color: crimson;
+            background-image: linear-gradient(to right, crimson, white, crimson);
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 5px;
+        }
+
+        .buttons {
+            float: right;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 15px 15px 15px 15px;
+            border-color: rgb(28, 3, 53);
+            background-color: white;
+            font-size: 15px;
+            padding: 5px;
+            margin-top: 15px;
+            margin-right: 5px;
+            font-family: Trebuchet MS;
+        }
+
+        .div2 {
+            text-align: center;
+            padding-top: 10px;
+            border-style: inset;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Trebuchet MS;
+            font-weight: bolder;
+            border-radius: 0px;
+            border-width: 5px;
+            font-size: 25px;
+            background-color: aliceblue;
+            height: 60px;
+            margin-bottom: 40px;
+            border-color: crimson;
+        }
+
+      
+
+        .card-title {
+            font-size: 18px;
+        }
+
+        .card {
+            border-radius: 15px;
+            border-color: white;
+            background-color: red;
+            background-image: linear-gradient(to top left, gray, white, white, white, white, white, white);
+            border-width: 0px;
+            transition: all 0.5s;
+
+        }
+
+        .card:hover {
+            transform: scale(1.08)
+        }
+
+        
+
+        .gototop {
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 15px 15px 0px 0px;
+            border-color: white;
+            background-color: white;
+            font-size: 15px;
+            padding: 5px;
+        }
+
+        .container {
+            width: 750px;
+            margin-left: 95px;
+
+
+
+
+
+        }
+
+        .row {
+            flex-wrap: inherit;
+        }
+
+        .card-body {
+
+            padding-top: 1px;
+            padding-bottom: 1px;
+
+        }
+
+
+       
+
+        
+        
+
+       
+    
+    </style>
+</head>
+
+<body id="body">
+    <div id="background">
+
+        
+
+        
+        <div id="header">
+
+            <p id = top></p>    
+
+            <button class="gotobottom"><a href="#bottom" name="top">Go to Bottom</a></button>
+            
+            <button class="buttons"><a href="">About Us</a></button>
+            <button class="buttons"><a href="">About Picture Gallery Applicartion</a></button>
+            <button class="buttons"><a href="">Contact</a></button>
+
+           
+            
+
+
+            <div class="div2" id="body">
+                <p>PICTURE GALLERY APPLICATION</p>
+
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 1. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 2.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 3.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 4.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 5.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 6. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 7.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 8.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 9.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 10.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 11. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 12.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 13.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 14.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 15.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+    <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 16. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 17.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 18.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 19.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 20.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+    <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 21. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 22.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 23.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 24.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 25.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 26. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 27.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 28.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 29.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 30.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 31. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 32.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 33.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 34.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 35.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 36. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 37.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 38.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 39.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 40.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+    <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 41. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 42.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 43.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 44.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 45.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+    <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1>Image 46. </h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 47.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 48.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 49.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                           
+
+                            <div class="card-body">
+                                <h1> Image 50.</h1 >
+                            
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <p id = bottom></p>
+
+    <button class="gototop"><a href="#top" name="top">Go to top</a></button>
+    </div id="background">
+    
+</body>
+
+</html>
