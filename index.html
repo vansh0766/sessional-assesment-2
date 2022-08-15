@@ -4,7 +4,7 @@
 <head>
 
     <title>Picture Galley Application</title>
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -66,7 +66,7 @@
             border-color: crimson;
         }
 
-      
+
 
         .card-title {
             font-size: 18px;
@@ -86,7 +86,7 @@
             transform: scale(1.08)
         }
 
-        
+
 
         .gototop {
             border-style: solid;
@@ -118,817 +118,71 @@
             padding-bottom: 1px;
 
         }
-
-
-       
-
-        
-        
-
-       
-    
+        .ajax_container {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+        }
+        .box {
+            margin: 20px;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            width: 200px;
+        }
+        .card img {
+            height: 200px;
+        }
     </style>
 </head>
 
 <body id="body">
     <div id="background">
-
-        
-
-        
         <div id="header">
-
-            <p id = top></p>    
-
+            <p id=top></p>
             <button class="gotobottom"><a href="#bottom" name="top">Go to Bottom</a></button>
-            
             <button class="buttons"><a href="">About Us</a></button>
             <button class="buttons"><a href="">About Picture Gallery Applicartion</a></button>
             <button class="buttons"><a href="">Contact</a></button>
-
-           
-            
-
-
             <div class="div2" id="body">
                 <p>PICTURE GALLERY APPLICATION</p>
-
-
             </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
+            <p id="bottom"></p>
+        </div>
+        <div class="ajax_container"></div>
+    </div>
+    <script>
+        const xhr = new XMLHttpRequest();
+        const apiURL = "https://jsonplaceholder.typicode.com/photos";
+        xhr.open("GET", apiURL);
+        xhr.onreadystatechange = () => {
+            if (xhr.status === 200 && xhr.readyState === 4) {
+                const response = JSON.parse(xhr.responseText);
+                let output = "";
+                for (let i = 0; i < 50; i++) {
+                    output += `
+                    <div class="box">
                         <div class="card">
-                           
-
+                            <img src="${response[i].url}">
                             <div class="card-body">
-                                <h1>Image 1. </h1 >
+                                <h5 class="card-title">${response[i].title}</h5>
                             
                             </div>
                         </div>
                     </div>
 
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 2.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 3.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 4.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 5.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 6. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 7.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 8.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 9.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 10.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 11. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 12.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 13.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 14.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 15.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-    <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 16. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 17.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 18.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 19.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 20.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-    <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 21. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 22.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 23.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 24.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 25.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 26. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 27.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 28.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 29.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 30.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 31. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 32.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 33.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 34.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 35.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 36. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 37.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 38.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 39.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 40.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-    <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 41. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 42.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 43.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 44.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 45.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-    <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1>Image 46. </h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 47.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 48.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 49.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mb-4">
-                        <div class="card">
-                           
-
-                            <div class="card-body">
-                                <h1> Image 50.</h1 >
-                            
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-            <p id = bottom></p>
-
-    <button class="gototop"><a href="#top" name="top">Go to top</a></button>
-    </div id="background">
-    
+            `;
+                }
+
+                document.querySelector(".ajax_container").innerHTML = output;
+            }
+        };
+
+        xhr.send();
+    </script>
 </body>
 
 </html>
